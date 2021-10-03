@@ -1,0 +1,187 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Account | innisfree Viet Nam</title>
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href=".css/style.css">
+        <link href="fontawesome-free-6.0.0-beta2-web/" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="/img/favicon.ico" />
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div id="container" class="sub bg">
+            <div class="grid">
+                <div class="contents">
+                    <span><a href="/">Homepage</a></span>
+                    <em>My page</em>
+                </div>
+            </div>
+            <div class="myPage main">
+                <div class="title_wrap">
+                    <div class="contents">
+                        <h1 class="title">My Page</h1>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="mypageWrap">
+                        <aside class="mypageCateArea">
+                            <div class="lnbTop">
+                                <a id="_cate_main" class="on" href="/mypage/main">My Page</a>
+                                <a id="_cate_info" class="twoLineT" href="#" onclick="_callPopCheckPw('/mypage/myinfo');return;">Confirm/Change customer's information</a>
+                                <a id="_cate_order"  href="/mypage/myorder">Order Management</a>
+                                <a id="_cate_address" href="/mypage/myaddress">Address Management</a>
+                                <a id="_cate_point"  href="/mypage/mypoint">Point Management</a>
+                                <a id="_cate_code"  href="/mypage/mycode">Coupon Management</a>
+                                <a id="_cate_review" href="/mypage/myreview">My Reviews</a>
+                                <a id="_cate_wish"  href="/mypage/mywish">My Favorites</a>
+                                <a id="_cate_offorder" class="twoLineT"  href="/mypage/myofforder">Order History</a>
+                                <a id="_cate_giftcard"  href="/mypage/mygiftcard">Gift Voucher</a>
+                                <a id="_cate_contact"  href="/mypage/mycontact">Q&A</a>
+                            </div>
+                        </aside>
+    
+    <script type="text/javascript">
+    
+        
+    $(document).ready(function(){
+        $(".mypageCateArea .lnbTop > a").removeClass("on");
+        $("#_cate_main").addClass("on");
+    });
+    
+    <!-- error message -->
+    function _errMsg(cId, errMsg){
+        $("#"+cId).closest('.inp_wrap').addClass("error");
+        $("#"+cId).closest('.inp_wrap').find('.help > .error').text(errMsg);
+        $("#"+cId).focus();
+    }
+    </script>
+                        <div class="mypageArea">
+                            <div class="section01">
+                                <div class="title">
+                                    <p>Hello,
+                                            <em>Sei</em>                                                                        
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="membership">
+                                        <div class="rate">
+                                            <div class="icon">
+                                                <div class="progressCircle welcome"></div>
+                                                <span class="ratePoint"><em id="_ratePoint1">0</em> / <span id="totalN">0</span></span>
+                                            </div>			
+                                            <div class="txt">
+                                                <p class="tit">Recent Rank Membership</p>
+                                                <p class="rateLevel l_welcome" id="_onoffLevel">Welcome</p>
+                                                <p class="subTxt" id="_addDesc">Rank will change to <em id="nextgradestr"></em> <br/> when shopping on <span id="_ratePoint2">0</span>,</p>
+                                                <a href="/membership?id=rewards" class="btn_underline" target="_blank">Membership Endow Notifications</a>
+                                            </div>
+                                        </div>
+                                        <dl class="article point">
+                                            <dt>Beauty Point</dt>
+                                            <dd><a href="/mypage/mypoint" id="_inPoint">0 P</a></dd>
+                                        </dl>
+                                        <dl class="article code">
+                                            <dt>Coupon Code</dt>
+                                            <dd><a href="/mypage/mycode" id="_inCode">0</a></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="community">
+                                        <div class="rate">
+                                            <div class="icon CA0101" id="_cmtLevelIcon"></div>
+                                            <div class="txt">
+                                                <p class="tit">Community Rank Membership</p>
+                                                <p class="rateLevel l_rising" id="_onLevel">RISING STAR</p>
+                                                <a href="/membership?id=rewards#innistar" class="btn_underline btmClear" target="_blank">Community Membership Endow Notifications</a>
+                                                <div class="btn_wrap">
+                                                    <a href="/innistar/home" class="btn btn_default btnSizeXS go_innistar"><span>My Innist<span class="star">a</span>r</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <dl class="article review">
+                                            <dt>Reviews</dt>
+                                            <dd><a href="/mypage/myreview" id="_reviewCnt">0</a></dd>
+                                        </dl>
+                                        <dl class="article like">
+                                            <dt>Thích</dt>
+                                            <dd id="_likeCnt">0</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section02">
+                                <div class="title">
+                                    <p>My acccount</p>
+                                </div>
+                                <div class="detailInfo">
+                                    <ul>
+                                        <li>
+                                            <a href="/mypage/myorder?listfl=1&ordstatcd=OR0102" id="_orderCnt2">0</a>
+                                            <p>Payment success</p>
+                                        </li>
+                                        <li>
+                                            <a href="/mypage/myorder?listfl=1&ordstatcd=OR0103" id="_orderCnt3">0</a>
+                                            <p>Products Prepare</p>
+                                        </li>
+                                        <li>
+                                            <a href="/mypage/myorder?listfl=1&ordstatcd=OR0104" id="_orderCnt4">0</a>
+                                            <p>Shipping</p>
+                                        </li>
+                                        <li>
+                                            <a href="/mypage/myorder?listfl=1&ordstatcd=OR0105" id="_orderCnt5">0</a>
+                                            <p>Shipment success</p>
+                                        </li>
+                                        <li>
+                                            <a href="/mypage/myorder?listfl=1&ordstatcd=OR0106" id="_orderCnt6">0</a>
+                                            <p>Buy successfully</p>
+                                        </li>
+                                    </ul>
+                                    <div class="details">
+                                        <dl class="article">
+                                            <dt>Cancel</dt>
+                                            <dd><a href="/mypage/myorder?listfl=2" id="_orderCancel">0</a></dd>
+                                        </dl>
+                                        <dl class="article">
+                                            <dt>Order Status</dt>
+                                            <dd><a href="/mypage/myorder?listfl=4" id="_orderReturn">0</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section03">
+                                <div class="title">
+                                    <p>Your Recent Review</p>
+                                </div>
+                                <div class="reviewArea reviewList li4">							
+                                    <div id="reviewList" class="mypageSlick">
+                                    </div>
+                                    <div class="noData border" id="_noReview" style="display:none;">
+                                        <i class="rv"></i>
+                                        <p class="tit2">No recent reviews.</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="section04">
+                                <div class="title">
+                                    <p>Recent products you've just watched</p>
+                                </div>
+                                <div class="pdtList pdtListType1 mypageSlick recentList">
+                                    <div id="recentList" class="pdtListIn">    
+                                    </div>
+                                    <div class="noData border" id="_noRecentList" style="display:none;">
+                                        <i class="product"></i>
+                                        <p class="tit2">No recent products watched.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

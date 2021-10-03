@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Account | innisfree Viet Nam</title>
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href=".css/style.css">
+        <link rel="shortcut icon" href="/img/favicon.ico" />
+    </head>
+    <body>
+        <div id="container" class="sub">
+            <div class="grid">
+                <div class="contents">
+                <span><a href="/">Homepage</a></span>
+                <span><a href="/mypage/main">My page</a></span>
+                <em>Order Management</em>
+            </div>
+        </div>
+        <div class="myPage">
+            <div class="title_wrap">
+                <div class="contents">
+                    <h1 class="title">My Page</h1>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="mypageWrap">
+                    <aside class="mypageCateArea">
+                        <div class="lnbTop">
+                            <a id="_cate_main" class="on" href="/mypage/main">My Page</a>
+                            <a id="_cate_info" class="twoLineT" href="#" onclick="_callPopCheckPw('/mypage/myinfo');return;">Confirm/Change customer's information</a>
+                            <a id="_cate_order"  href="/mypage/myorder">Order Management</a>
+                            <a id="_cate_address" href="/mypage/myaddress">Address Management</a>
+                            <a id="_cate_point"  href="/mypage/mypoint">Point Management</a>
+                            <a id="_cate_code"  href="/mypage/mycode">Coupon Management</a>
+                            <a id="_cate_review" href="/mypage/myreview">My Reviews</a>
+                            <a id="_cate_wish"  href="/mypage/mywish">My Favorites</a>
+                            <a id="_cate_offorder" class="twoLineT"  href="/mypage/myofforder">Order History</a>
+                            <a id="_cate_giftcard"  href="/mypage/mygiftcard">Gift Voucher</a>
+                            <a id="_cate_contact"  href="/mypage/mycontact">Q&A</a>
+                        </div>
+                    </aside>
+                </div>
+                <div class="mypageArea">
+                    <form id="_searchform" name="_searchform" onSubmit="return false;">
+                        <input type="hidden" name="pageSize" id="pageSize" value="10"/>
+                        <input type="hidden" name="pageNumber" id="pageNumber" value="1"/>
+                        <input type="hidden" name="listfl" id="listfl" value="1"/>
+                        <input type="hidden" name="ordstatcd" id="ordstatcd" value=""/>
+                        <h2 class="page_tit">Order Management</h2>
+                        <div class="myorder_wrap">
+                            <div class="tabType tabType1 ta_c no_link">
+                                <ul>
+                                    <li id="listfl1" class="on"><a href='#' onclick='chgList(1);'><span>Order Management</span></a></li>
+                                    <li id="listfl2"><a href='#' onclick='chgList(2);'><span>Cancellation details</span></a></li>
+                                    <li id="listfl4"><a href='#' onclick='chgList(4);'><span>Return status</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="orderStatus orderStatus_1" style="display:none;">
+                                <p class="tit">Order Status</p> 
+                                <div class="status">
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_ALL" value="">
+                                        <label for="ordstatcd_1_ALL">All</label> 
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0102" value="OR0102" >
+                                        <label for="ordstatcd_1_OR0102">Payment Success</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0103" value="OR0103" >
+                                        <label for="ordstatcd_1_OR0103">Product Prepare</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0104" value="OR0104" >
+                                        <label for="ordstatcd_1_OR0104">Shipping</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0105" value="OR0105" >
+                                        <label for="ordstatcd_1_OR0105">Shipment Success</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0106" value="OR0106" >
+                                        <label for="ordstatcd_1_OR0106">Buy successfully</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0141" value="OR0141" >
+                                        <label for="ordstatcd_1_OR0141">Cancellation Details</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_1" id="ordstatcd_1_OR0142" value="OR0142" >
+                                        <label for="ordstatcd_1_OR0142">Return Status</label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="orderStatus orderStatus_2" style="display:none;">
+                                <p class="tit">Order Status</p>
+                                <div class="status">
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_2" id="ordstatcd_2_OR0111"  value="OR0111" checked>
+                                        <label for="ordstatcd_2_OR0111">Cancel Successfully</label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="orderStatus  orderStatus_4" style="display:none;">
+                                <p class="tit">Order Status</p>
+                                <div class="status">
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_ALL"  value="" checked>
+                                        <label for="ordstatcd_4_ALL">All</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0131"  value="OR0131" >
+                                        <label for="ordstatcd_4_OR0131">Return Registrations</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0132"  value="OR0132" >
+                                        <label for="ordstatcd_4_OR0132">Payment Receipt</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0133"  value="OR0133" >
+                                        <label for="ordstatcd_4_OR0133">Returning</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0136"  value="OR0136" >
+                                        <label for="ordstatcd_4_OR0136">Return Check</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0134"  value="OR0134" >
+                                        <label for="ordstatcd_4_OR0134">Return Successfully</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0135"  value="OR0135" >
+                                        <label for="ordstatcd_4_OR0135">Cannot Return</label>
+                                    </span>
+                                    <span class="inp_radio">
+                                        <input type="radio" name="ordstatcd_4" id="ordstatcd_4_OR0137"  value="OR0137" >
+                                        <label for="ordstatcd_4_OR0137">Return Cancel</label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="searchDate">
+                                <div class="left_group">
+                                    <ul class="fix_date tabType tabType2 no_link">
+                                        <li class="on" id="_mon1"><a href="#" onclick="setSchMonth(1)"><span>1 month</span></a></li>
+                                        <li id="_mon6"><a href="#" onclick="setSchMonth(6)"><span>6 months</span></a></li>
+                                        <li id="_mon12"><a href="#" onclick="setSchMonth(12)"><span>12 months</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="right_group">
+                                    <div class="inp_wrap self_date">
+                                        <div class="inp_text">
+                                            <input type="text" name="stdate" id="stdate" placeholder="" class="datepicker">
+                                        </div>
+                                        <span class="bar">~</span>
+                                        <div class="inp_text">
+                                            <input type="text" name="enddate" id="enddate" placeholder="" class="datepicker">
+                                        </div>
+                                        <button type="button" class="btn btn_default btnSizeM" onclick="getOrdStateList();return;">
+                                            <span class="bar"></span><span class="arr-right">Search<i class="arr"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbl_order tbl_myorder">
+                                <div class="opt_total">
+                                    <p>Orders <span class="n" id="StIdx">0</span>-<span class="n" id="EndIdx">0</span> of <span class="n" id="totalCnt">0</span> found</p>
+                                </div>
+                                <table>
+                                    <colgroup>
+                                        <col style="width:11.9%;">
+                                        <col style="width:13.93%;">
+                                        <col style="width:*;">
+                                        <col style="width:15.5%;">
+                                        <col style="width:200px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>Order Date</th>
+                                            <th>Order Code</th>
+                                            <th>Product Name</th>
+                                            <th>Payment Amount</th>
+                                            <th>Order Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="hisList">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="IGView">
+                                <div class="order_process">
+                                    <ul>
+                                        <li class="step1">
+                                            <div class="dt">01<p>Payment Success</p></div>
+                                            <div class="dd">You can check the content of the completed order.</div>
+                                        </li>
+                                        <li class="step2">
+                                            <div class="dt">02<p>Product Prepare</p></div>
+                                            <div class="dd">Order received successfully, the product is being packed.</div>
+                                        </li>
+                                        <li class="step3">
+                                            <div class="dt">03<p>Shipping</p></div>
+                                            <div class="dd">The delivery company is delivering the goods you ordered to the specified location.</div>
+                                        </li>
+                                        <li class="step4 btm">
+                                            <div class="dt">04<p>Shipment Success</p></div>
+                                            <div class="dd">The product has been successfully delivered to you.</div>
+                                        </li>
+                                        <li class="step5 btm">
+                                            <div class="dt">05<p>Buy Successfully</p></div>
+                                            <div class="dd">Completed order confirmation. Let's take care like Korean skin~</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="my_notice_box">
+                                <p class="tit">Note</p>
+                                <p class="txt">- You can check order information by clicking the order code.</p>
+                                <p class="txt">- Cancellation is not accepted after payment has been completed.</p>
+                                <p class="txt">- You can check the delivery status when the order status changes to "Shipping".</p>
+                                <p class="txt">- Bonus points will be added after the customer receives the product and confirms the order.</p>
+                                <p class="txt">- The order will be automatically confirmed after 7 days from the date of successful delivery. </p>
+                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
