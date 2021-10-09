@@ -3,4 +3,4 @@ https://https-github-com-hieunt0303.github.io/innisfree-customerInfo/mypage/inde
 # myOrder
 https://https-github-com-hieunt0303.github.io/innisfree-customerInfo/mypage/myorder.html
 # membership
-https://https-github-com-hieunt0303.github.io/innisfree-customerInfo/mypage/membership_rewards.html
+https://https-github-com-hieunt0303.github.io/innisfree-customerInfo/mypage/membership_reward.html
