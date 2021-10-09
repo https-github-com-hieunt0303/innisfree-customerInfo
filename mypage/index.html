@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Account | innisfree Viet Nam</title>
-        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/style.css">
         <link href="fontawesome-free-6.0.0-beta2-web/" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="/img/favicon.ico" />
+        <link rel="shortcut icon" href="/img/favicon.png" />
     </head>
     <body>
         <!-- HEADER -->
@@ -24,7 +24,7 @@
             <div class="myPage main">
                 <div class="title_wrap">
                     <div class="contents">
-                        <h1 class="title">My Page</h1>
+                        <h1 class="title">MY PAGE</h1>
                     </div>
                 </div>
                 <div class="contents">
@@ -52,7 +52,7 @@
         $("#_cate_main").addClass("on");
     });
     
-    <!-- error message -->
+    // <!-- error message -->
     function _errMsg(cId, errMsg){
         $("#"+cId).closest('.inp_wrap').addClass("error");
         $("#"+cId).closest('.inp_wrap').find('.help > .error').text(errMsg);
@@ -77,7 +77,7 @@
                                                 <p class="tit">Recent Rank Membership</p>
                                                 <p class="rateLevel l_welcome" id="_onoffLevel">Welcome</p>
                                                 <p class="subTxt" id="_addDesc">Rank will change to <em id="nextgradestr"></em> <br/> when shopping on <span id="_ratePoint2">0</span>,</p>
-                                                <a href="/membership?id=rewards" class="btn_underline" target="_blank">Membership Endow Notifications</a>
+                                                <a href="membership_reward.html" class="btn_underline" target="_blank">Membership Endow Notifications</a>
                                             </div>
                                         </div>
                                         <dl class="article point">
@@ -95,7 +95,7 @@
                                             <div class="txt">
                                                 <p class="tit">Community Rank Membership</p>
                                                 <p class="rateLevel l_rising" id="_onLevel">RISING STAR</p>
-                                                <a href="/membership?id=rewards#innistar" class="btn_underline btmClear" target="_blank">Community Membership Endow Notifications</a>
+                                                <a href="membership_reward.html" class="btn_underline btmClear" target="_blank">Community Membership Endow Notifications</a>
                                                 <div class="btn_wrap">
                                                     <a href="/innistar/home" class="btn btn_default btnSizeXS go_innistar"><span>My Innist<span class="star">a</span>r</span></a>
                                                 </div>
