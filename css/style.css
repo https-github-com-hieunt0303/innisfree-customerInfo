@@ -34,7 +34,7 @@ BUTTON
     line-height: 28px;
 }
 /**
-태그 초기화
+Tag initialization
 **/
 html, body {width:100%;height:100%;}
 body {margin:0;font-family:'noto','맑은고딕',sans-serif;font-size:14px;line-height:29px;color:#101010;}
@@ -62,7 +62,7 @@ header, footer, article, aside, nav, section, div {box-sizing:border-box;}
 }
 
 /**
-display
+Display
 **/
 .contents {
     padding: 0 4%;
@@ -200,7 +200,7 @@ Membership
 }
 
 
-/* 페이지타이틀 */
+/* Page title */
 .title_wrap {position:relative;padding:64px 0 17px;background:#fff;}
 .title_wrap.border {border-bottom:1px solid #d2d2d2;}
 .title_wrap.bg {background:#fafafa;}
@@ -214,7 +214,7 @@ Membership
 .mypageWrap .mypageArea .page_tit.border {padding:50px 0 25px; border-bottom:1px solid #ccc;}
 .mypageWrap .list_view_group {margin-top:80px;}
 
-/* 마이페이지 메인 */
+/* My page main */
 .myPage.main{background:#fafafa;}
 .myPage.sub {background:#fff;}
 .myPage .title_wrap {border-bottom:1px solid #ccc;background:#fafafa;}
@@ -319,19 +319,19 @@ Membership
 #clame_pic_upload .lyBody {text-align:center;}
 #clame_pic_upload img {width:100%;max-width:400px;}
 
-/* 마이페이지 리뷰&제품 추가 */
+/* Add My Page Review & Product */
 .mypageArea .reviewList .reviewItem {margin-top:0px;}
 .mypageArea .reviewList .reviewItem .rvWrap {padding:15px 15px 0px;text-align:left;}
 .mypageArea .reviewList .reviewItem .rv_con {border-top:0 none;padding-bottom:0;}
 .mypageArea .reviewList .reviewItem .rv_bottom {padding:13px 0;}
 .mypageArea .reviewList .reviewItem .rv_con .subj {font-size:16px;}
 .section04 .pdtListType1 .pdtItem {margin-top:0px;}
-/* 마이페이지 slick */
+/* my page slick */
 .mypageSlick .slick-arrow {width:35px;height:35px;margin-top:0;}
 .mypageSlick .slick-prev {left:auto;right:0;margin-right:85px;margin-left:0;}
 .mypageSlick .slick-next {margin-right:10px;}
 
-/* 마이페이지 비번변경 팝업*/
+/* My Page password change popup*/
 #mypageChagePw .addDesc {line-height:24px;white-space:normal;}
 
 @media all and (max-width:1599px) {
@@ -372,7 +372,7 @@ Membership
 	.progressCircle.welcome:after{background:url('../img/ico_mp_welcome.png') no-repeat center;background-color:#fff;background-size:85px;}
 	.progressCircle.vip:after{background:url('../img/ico_mp_vip.png') no-repeat center;background-color:#fff;background-size:85px;}
 
-	/* 마이페이지 리뷰&제품 추가 */
+	/* Add My Page Review & Product */
 	.mypageArea .reviewList .reviewItem .rvWrap {height:485px;}
 	.section03 .title, .section04 .title {padding:60px 0 40px;}
 	.mypageSlick .slick-arrow {top:-70px;}
@@ -414,12 +414,12 @@ Membership
 	.progressCircle:after{width:96px;height:96px;}
 	.progressCircle.welcome:after{background:url('../img/ico_mp_welcome.png') no-repeat center;background-color:#fff;background-size:100px;}
 	.progressCircle.vip:after{background:url('../img/ico_mp_vip.png') no-repeat center;background-color:#fff;background-size:100px;}
-	/* 마이페이지 리뷰&제품 추가 */
+	/* Add My Page Review & Product */
 	.mypageArea .reviewList .reviewItem .rvWrap {height:430px;}
 	.section03 .title, .section04 .title {padding:70px 0 35px;}
 	.mypageSlick .slick-arrow {top:-65px;}
 }
-/* 내 주문리스트 */
+/* My order list */
 .myorder_wrap .tabType {border-bottom:1px solid #ccc;}
 .myorder_wrap .tabType1 li {width:33.33%;margin-right:0;text-align:center;}
 .myorder_wrap .tabType1 li a {position:relative;}
@@ -471,7 +471,7 @@ Membership
 .myorder_wrap .my_notice_box .tit {margin-bottom:10px;font-family:'noto md';}
 .myorder_wrap .my_notice_box .txt {color:#767676;}
 
-/* 내 주문 상세 */
+/* My order details */
 .myorder_info {position:relative;padding:0 0 20px 0;border-bottom:1px solid #767676;}
 .myorder_info.clame {border-top:1px solid #767676;}
 .myorder_info:after {content:''; display:block; clear:both;}
@@ -503,7 +503,7 @@ Membership
 	.myorder_wrap .btn_bottom {padding:0;}
 }
 
-/* 내 주문리스트 - 취소 */
+/* My Order List - Cancel */
 .myorder_wrap .order_process.cancel li {float:left;width:33.33%;padding:0 4%;}
 .myorder_wrap .order_process.cancel li.one {width:100%;padding:0 4%;}
 .myorder_wrap .order_process.cancel li.four {width:25%;padding:0 4%;}
@@ -518,7 +518,7 @@ Membership
 .refund_order_info .div_tbl .cell2 {width:auto;}
 .refund_order_info .div_tbl .cell2 .inp_select {width:265px;}
 
-/* 오프라인 리스트 */
+/* Offline list */
 .myorder_wrap .sub_txt_type {line-height:18px;font-size:12px;}
 
 .myorder_wrap .tbl_myorder .off_tit {display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;text-align:left;}
